@@ -1,8 +1,31 @@
 
 \documentclass [PhD] {uclathes}
 
-% \input {mymacros}                         % personal LaTeX macros
-
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} % usually not needed (loaded by default)
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{linkcolor}{RGB}{0,0,102}
+\usepackage{hyperref} 
+\hypersetup{
+	pdfstartview = {XYZ},
+	colorlinks,
+	allcolors = linkcolor,
+	bookmarksopen,
+	bookmarksnumbered
+}
+\usepackage{setspace}
+\usepackage{silence}
+\WarningFilter{caption}{Unknown} % captionpackage complains about thesis document class
+\usepackage{caption}
+\captionsetup{font={stretch=1}}
+\usepackage{tabularx, colortbl}
+\definecolor{mygray}{gray}{0.9}
+\def \figscale {0.28}
+\usepackage{multicol}
+\usepackage{soul}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Usually things live in separate flies.
@@ -57,7 +80,7 @@
 
         \publication{Xinzhu Wei*, \textbf{Christopher R. Robles*, }, Ali Pazokitoroudi, Andrea Ganna, Alexander Gusev, Arun Durvasula, Steven Gazal, Po-Ru Loh, David Reich and Sriram Sankararaman.``The lingering effects of Neanderthal introgression on human complex traits". \textit{ In submission. *Equally contributed}.}      
         \publication {Charleston W. K. Chiang, Serghei Mangul, \textbf{Christopher R. Robles}, Sriram Sankararam``A comprehensive map of genetic variation in the world's largest ethnic group - Han Chinese". \textit{Molecular Biology and Evolution}, Volume 35, Issue 11, 1 November 2018, Pages 2736–2750, \url{https://doi.org/10.1093/molbev/msy170}}
-        \publication{Kristina M. Garske, David Z. Pan, Zong Miao, Yash V. Bhagat, Caroline Comenho, \textbf{Christopher R. Robles}, Jihane N. Benhammou, Marcus Alvarez, Arthur Ko, Chun Jimmie Ye, Joseph R. Pisegna, Karen L. Mohlke, Janet S. Sinsheimer, Markku Laakso, Päivi Pajukanta.``Reverse gene-environment interaction approach to identify variants influencing body mass index in humans".\textit{Nat Metab 1}, 630–642 (2019), \url{https://doi.org/10.1038/s42255-019-0071-6}}
+        \publication{Kristina M. Garske, David Z. Pan, Zong Miao, Yash V. Bhagat, Caroline Comenho, \textbf{Christopher R. Robles}, Jihane N. Benhammou, Marcus Alvarez, Arthur Ko, Chun Jimmie Ye, Joseph R. Pisegna, Karen L. Mohlke, Janet S. Sinsheimer, Markku Laakso, Päivi Pajukanta.``Reverse gene-environment interaction approach to identify variants influencing body mass index in humans".\textit{Nat Metab 1}, 630–642 (2019),\\ \url{https://doi.org/10.1038/s42255-019-0071-6}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -79,15 +102,9 @@
 \input {chapter3/chapter3}                         % etc.
 \input {chapter4/chapter4}
 \input {chapter5/chapter5}
-%\input {chapter6}
-%\input {chapter7}
-%\input {chapter8}
-
-%\chapter{Introduction}
-
-
-%\bibliography {bib/network,bib/naming}    % bibliography references
-%\bibliographystyle {thesis}
+ \typeout{}
+\bibliography{chapter3/chapter3}
+\bibliographystyle{unsrt}
 
 \end {document}
 
